@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação</title>
+</head>
+<body>
+    <h1>Interação com JavaScript</h1>
+    <div id="container" onclick="interact()">
+        Interaja...
+    </div>
+
+    <script>
+        var a = document.getElementById('container');
+
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+
+        function clicar() {
+            a.innerText = 'clicou';
+            a.style.background = 'red';
+        }
+
+        function entrar() {
+            a.style.background = 'lightgray';
+        }
+
+        function sair() {
+            a.style.background = 'white';
+        }
+
+    </script>
+</body>
+</html>
